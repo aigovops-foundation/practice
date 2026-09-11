@@ -80,11 +80,12 @@ real decision receipt. Today the decision is yours on paper; the receipt in step
 
 ### 5 · Prove — get a real signed receipt (10 min) — live
 
-Open Beacon's home page: **aigovops-foundation.github.io/aigovops-beacon/**. It runs entirely in your
-browser: it generates an Ed25519 key, discovers a sample inventory, signs each receipt with canonical
-JCS, and assembles a downloadable evidence bundle. Nothing is sent anywhere.
+Open **[Beacon in worksheet mode](https://aigovops-foundation.github.io/aigovops-beacon/?worksheet=100)**. One
+button: it generates an Ed25519 key in your browser, signs each receipt with canonical JCS, assembles a
+downloadable evidence bundle, and shows the three values below on screen with a copy button. Nothing is
+sent anywhere. (The bundle's `VERIFY.md` carries the same values.)
 
-Download the bundle. Open it. Find `VERIFY.md` and the receipts file. Copy:
+Copy:
 
 - Key fingerprint: __________________________
 - Bundle hash: __________________________

@@ -82,11 +82,12 @@ del paso 5 es real.
 
 ### 5 · Prueba — consigue un recibo real y firmado (10 min) — hoy
 
-Abre la página de Beacon: **aigovops-foundation.github.io/aigovops-beacon/**. Se ejecuta por completo en
-tu navegador: genera una clave Ed25519, descubre un inventario de ejemplo, firma cada recibo con JCS
-canónico y arma un paquete de evidencia descargable. Nada se envía a ninguna parte.
+Abre **[Beacon en modo hoja de trabajo](https://aigovops-foundation.github.io/aigovops-beacon/?worksheet=100)**. Un
+botón: genera una clave Ed25519 en tu navegador, firma cada recibo con JCS canónico, arma un paquete de
+evidencia descargable y muestra en pantalla los tres valores de abajo con un botón para copiar. Nada se
+envía a ninguna parte. (El `VERIFY.md` del paquete lleva los mismos valores.)
 
-Descarga el paquete. Ábrelo. Busca `VERIFY.md` y el archivo de recibos. Copia:
+Copia:
 
 - Huella de la clave: __________________________
 - Hash del paquete: __________________________
