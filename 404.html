@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex">
+  <meta name="aigovops-redirect-from" content="https://practice.aigovops-foundation.com/">
+  <meta name="aigovops-redirect-to" content="https://www.aigovops-foundation.com/practice/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="canonical" href="https://www.aigovops-foundation.com/practice/">
+  <title>Page moved</title>
+</head>
+<body>
+  <p>This page has moved. <a href="https://www.aigovops-foundation.com/practice/">Continue to the new site</a>.</p>
+  <script>
+    const mapUrl = (function mapUrl(fromBase, toBase, href) {
+  try {
+    const from = new URL(fromBase);
+    const to = new URL(toBase);
+    const current = new URL(href);
+    if (
+      from.origin !== current.origin ||
+      from.search ||
+      from.hash ||
+      to.search ||
+      to.hash
+    ) {
+      return null;
+    }
+
+    const fromPath = from.pathname.endsWith("/") ? from.pathname : `${from.pathname}/`;
+    const fromRoot = fromPath === "/" ? "/" : fromPath.slice(0, -1);
+    let subPath;
+    if (current.pathname === fromRoot || current.pathname === fromPath) subPath = "";
+    else if (current.pathname.startsWith(fromPath)) subPath = current.pathname.slice(fromPath.length);
+    else return null;
+
+    const toPath = to.pathname.endsWith("/") ? to.pathname : `${to.pathname}/`;
+    const mapped = new URL(to.href);
+    mapped.pathname = `${toPath}${subPath}`;
+    mapped.search = current.search;
+    mapped.hash = current.hash;
+    return mapped.href;
+  } catch {
+    return null;
+  }
+});
+    const mapped = mapUrl("https://practice.aigovops-foundation.com/", "https://www.aigovops-foundation.com/practice/", window.location.href);
+    if (mapped) window.location.replace(mapped);
+  </script>
+</body>
+</html>
