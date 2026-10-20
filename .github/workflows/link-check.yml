@@ -2,13 +2,13 @@ name: link-check
 
 # Every Markdown link in the repo — relative links between worksheets and external links alike —
 # must resolve. Practice #3: the rendered Pages have a footer now; this keeps the links honest.
+# Pull requests and pushes only since 2026-10-20: the weekly estate-wide link check runs in the
+# Library (one matrix over estate.yaml), so a second weekly crawl here was a duplicate email.
 
 on:
   pull_request:
   push:
     branches: [main]
-  schedule:
-    - cron: "17 6 * * 1"   # Mondays, before the Letter
 
 permissions:
   contents: read
