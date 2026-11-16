@@ -1,7 +1,7 @@
 # Level 200 · Retrofit — worksheet
 
-**Scenarios:** the bot that agreed to sell a Tahoe for $1 ([FailFest](https://www.aigovops-foundation.com/f-ai-friday.html) **VH-022, Chevrolet of
-Watsonville / Fullpath**) and the deploy that lost $440M in 45 minutes (**VH-056, Knight Capital**).
+**Scenarios:** the parcel firm's chatbot that a customer talked into swearing and calling its own company the worst
+([FailFest](https://www.aigovops-foundation.com/f-ai-friday.html?id=VH-049) **VH-049, DPD**) and the deploy that lost $440M in 45 minutes (**VH-056, Knight Capital**).
 **Time:** 60 minutes. **Install:** Python 3.11+, git; one `pip install` from source.
 **Skills needed:** either. The plain-words path writes the rules as sentences and lets the tools render
 them; the code path writes YAML and reads the sentences back.
@@ -23,9 +23,11 @@ them; the code path writes YAML and reads the sentences back.
 
 ### 1 · Read both cases (5 min) — live
 
-**VH-022.** A dealership's customer-service bot, prompted to "agree with anything the customer says",
-agreed to sell a 2024 Tahoe for $1 and called it a legally binding offer. Gate: *system prompts are not
-security boundaries; consequential commitments require deterministic rules, not LLM goodwill.*
+**VH-049.** After a system update, one frustrated customer talked a parcel firm's customer-service chatbot
+into swearing, writing a poem about how useless it was, and calling its own company "the worst delivery
+firm in the world". The firm switched the AI part off (January 2024). Gate: *system prompts are not
+security boundaries; what a bot may say or promise for the company is a deterministic rule outside the
+model, tested against angry and tricky customers before launch.*
 
 **VH-056.** Knight Capital deployed new trading code to seven of eight servers; the eighth ran old code
 with a repurposed flag. Forty-five minutes, $440 million. Gate: *algorithmic systems with market-moving
@@ -130,7 +132,7 @@ the gate said, what changed. Thursday: pair with a 100 and watch them get their 
 
 ## Checklist — one page
 
-*One page. Tick as you go.* · Scenarios VH-022 Chevrolet of Watsonville · VH-056 Knight Capital · 60 minutes · one install
+*One page. Tick as you go.* · Scenarios VH-049 DPD · VH-056 Knight Capital · 60 minutes · one install
 
 **Before**
 - [ ] I am a 100 (a host marked it).

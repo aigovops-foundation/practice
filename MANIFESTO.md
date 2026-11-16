@@ -37,7 +37,7 @@ can verify offline, without an account and without trusting us.
 | Level | You will | Built on |
 |---|---|---|
 | **100 Begin** | gate one action and hold one receipt — nothing installed | Air Canada's chatbot |
-| **200 Retrofit** | gate one agent of your own and put the rule in CI | the $1 Chevy · Knight Capital |
+| **200 Retrofit** | gate one agent of your own and put the rule in CI | the DPD chatbot · Knight Capital |
 | **300 Hold** | hold, budget and bind identity under real traffic; state a coverage number | Arup · Cigna PXDX · nH Predict |
 | **400 Prove** | verify a stranger's evidence offline; host a Thursday | Robodebt · Toeslagenaffaire · Horizon |
 

@@ -38,7 +38,7 @@ propia lente · **Devolverla** a la comunidad.
 | Nivel | Harás | Basado en |
 |---|---|---|
 | **100 Empezar** | poner una compuerta a una acción y quedarte con un recibo — nada que instalar | el chatbot de Air Canada |
-| **200 Adaptar** | poner una compuerta a un agente tuyo y llevar la regla a CI | el Chevy de un dólar · Knight Capital |
+| **200 Adaptar** | poner una compuerta a un agente tuyo y llevar la regla a CI | el chatbot de DPD · Knight Capital |
 | **300 Retener** | retener, presupuestar y vincular identidad con tráfico real; declarar una cifra de cobertura | Arup · Cigna PXDX · nH Predict |
 | **400 Demostrar** | verificar sin conexión la evidencia de un desconocido; ser anfitrión de un jueves | Robodebt · Toeslagenaffaire · Horizon |
 

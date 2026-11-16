@@ -5,7 +5,7 @@ applies_to:
   system: <your-system>
   agents: ["<your-agent>"]
 controls:
-  - action: commitment.make          # VH-022: a commitment to a customer is never made by the model alone
+  - action: commitment.make          # VH-049: what the bot promises for the company is never left to the model alone
     tier: C3
     decision: hold
     approver_role: account_owner
