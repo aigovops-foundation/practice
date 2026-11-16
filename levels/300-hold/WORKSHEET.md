@@ -1,8 +1,8 @@
 # Level 300 · Hold — worksheet
 
 **Scenarios:** HK$200M wired after a video call full of deepfaked colleagues ([FailFest](https://www.aigovops-foundation.com/f-ai-friday.html) **VH-015,
-Arup**); 300,000 claims denied in two months at 1.2 seconds each (**VH-035, Cigna PXDX**); an
-algorithm overruling clinicians on coverage (**VH-011, UnitedHealth nH Predict**).
+Arup**); 300,000 claims denied in two months at 1.2 seconds each (**VH-035, Cigna PXDX**); a
+lawsuit alleging an algorithm overruled clinicians on coverage, which the insurer denies (**VH-011, UnitedHealth nH Predict**).
 **Time:** 60 minutes today (tabletop + policy + self-audit); then a week of real traffic when the
 operate gate lands. **Skills needed:** either path. This level is mostly judgment; the tools enforce
 what you decide here.
@@ -33,8 +33,8 @@ transfers require out-of-band confirmation.*
 300,000 in two months, an average of 1.2 seconds each. Gate: *a human medical reviewer actually reviews
 before any claim is denied.*
 
-**nH Predict, 2023.** A model's predicted length of stay was used to cut off post-acute care over
-clinicians' judgment. Gate: *a model may inform but never replace clinical judgment in coverage decisions.*
+**nH Predict, 2023.** A class action filed in November 2023 alleges that a model's predicted length of stay
+was used to cut off post-acute care over clinicians' judgment. UnitedHealth denies it. Gate: *a model may inform but never replace clinical judgment in coverage decisions.*
 
 Which of your agent's actions is the Arup one (irreversible, high value)? ______________
 Which is the Cigna one (small, fast, and dangerous in volume)? ______________

@@ -1,8 +1,8 @@
 # Nivel 300 · Hold — hoja de trabajo
 
 **Escenarios:** 200 M HK$ transferidos tras una videollamada llena de colegas deepfake ([FailFest](https://www.aigovops-foundation.com/f-ai-friday.html?id=VH-015) **VH-015,
-Arup**); 300.000 reclamaciones denegadas en dos meses a 1,2 segundos cada una (**VH-035, Cigna PXDX**); un
-algoritmo que anula el criterio clínico sobre la cobertura (**VH-011, UnitedHealth nH Predict**).
+Arup**); 300.000 reclamaciones denegadas en dos meses a 1,2 segundos cada una (**VH-035, Cigna PXDX**); una
+demanda que alega que un algoritmo anuló el criterio clínico sobre la cobertura, algo que la aseguradora niega (**VH-011, UnitedHealth nH Predict**).
 **Tiempo:** 60 minutos hoy (mesa + política + autoauditoría); después una semana de tráfico real cuando
 llegue la puerta de operación. **Habilidades necesarias:** cualquiera de las dos vías. Este nivel es sobre todo criterio; las herramientas
 hacen cumplir lo que decidas aquí.
@@ -33,8 +33,8 @@ transferencias de alto valor exigen confirmación por un canal independiente.*
 300.000 en dos meses, una media de 1,2 segundos cada una. Puerta: *un revisor médico humano revisa de verdad
 antes de denegar cualquier reclamación.*
 
-**nH Predict, 2023.** La duración de estancia predicha por un modelo se usó para cortar cuidados posagudos por encima del
-criterio de los clínicos. Puerta: *un modelo puede informar pero nunca sustituir el criterio clínico en decisiones de cobertura.*
+**nH Predict, 2023.** Una demanda colectiva presentada en noviembre de 2023 alega que la duración de estancia predicha por un
+modelo se usó para cortar cuidados posagudos por encima del criterio de los clínicos. UnitedHealth lo niega. Puerta: *un modelo puede informar pero nunca sustituir el criterio clínico en decisiones de cobertura.*
 
 ¿Cuál de las acciones de tu agente es la de Arup (irreversible, alto valor)? ______________
 ¿Cuál es la de Cigna (pequeña, rápida y peligrosa en volumen)? ______________

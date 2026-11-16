@@ -1,7 +1,7 @@
 # Level 200 · Retrofit — worksheet
 
 **Scenarios:** the parcel firm's chatbot that a customer talked into swearing and calling its own company the worst
-([FailFest](https://www.aigovops-foundation.com/f-ai-friday.html?id=VH-049) **VH-049, DPD**) and the deploy that lost $440M in 45 minutes (**VH-056, Knight Capital**).
+([FailFest](https://www.aigovops-foundation.com/f-ai-friday.html?id=VH-049) **VH-049, DPD**) and the deploy that lost more than $460M in 45 minutes (**VH-056, Knight Capital**).
 **Time:** 60 minutes. **Install:** Python 3.11+, git; one `pip install` from source.
 **Skills needed:** either. The plain-words path writes the rules as sentences and lets the tools render
 them; the code path writes YAML and reads the sentences back.
@@ -30,7 +30,7 @@ security boundaries; what a bot may say or promise for the company is a determin
 model, tested against angry and tricky customers before launch.*
 
 **VH-056.** Knight Capital deployed new trading code to seven of eight servers; the eighth ran old code
-with a repurposed flag. Forty-five minutes, $440 million. Gate: *algorithmic systems with market-moving
+with a repurposed flag. Forty-five minutes, more than $460 million. Gate: *algorithmic systems with market-moving
 authority have deploy gating, kill switches and rehearsed rollback.*
 
 One is about the agent. One is about the pipeline that ships the agent. You will gate both.
