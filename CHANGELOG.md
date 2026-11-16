@@ -2,6 +2,14 @@
 
 All notable changes. Semantic versioning; the release train is `fall-2026`.
 
+## Unreleased
+
+### Changed
+- 16 Nov 2026: Level 200's agent case is now **VH-049 DPD** (the parcel chatbot talked into swearing at a
+  customer, January 2024), replacing VH-022 in the worksheet (EN and ES), its README and policy template,
+  the café card, the Manifesto (EN and ES) and `MEMBER-ACTIVITIES.md`. Knight Capital (VH-056) stays.
+  Dated records (`docs/WREN.md`, the PRD, the 11 Sept changes note) keep the case as it was taught then.
+
 ## [1.0.0-rc.1] — 2026-09-11
 
 Fall 2026 Release candidate. Nothing in the engines has changed; this repo is content, worksheets and

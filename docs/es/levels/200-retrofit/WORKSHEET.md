@@ -1,7 +1,7 @@
 # Nivel 200 · Adaptar — hoja de trabajo
 
-**Escenarios:** el bot que aceptó vender una Tahoe por 1 $ ([FailFest](https://www.aigovops-foundation.com/f-ai-friday.html?id=VH-022) **VH-022, Chevrolet of
-Watsonville / Fullpath**) y el despliegue que perdió 440 M$ en 45 minutos (**VH-056, Knight Capital**).
+**Escenarios:** el chatbot de una empresa de paquetería al que un cliente convenció para soltar palabrotas y llamar a su propia empresa la peor
+([FailFest](https://www.aigovops-foundation.com/f-ai-friday.html?id=VH-049) **VH-049, DPD**) y el despliegue que perdió 440 M$ en 45 minutos (**VH-056, Knight Capital**).
 **Tiempo:** 60 minutos. **Instalar:** Python 3.11+, git; un `pip install` desde el código fuente.
 **Habilidades necesarias:** cualquiera de las dos. La vía en palabras llanas escribe las reglas como frases y deja que las
 herramientas las rendericen; la vía de código escribe YAML y lee las frases de vuelta.
@@ -23,9 +23,11 @@ herramientas las rendericen; la vía de código escribe YAML y lee las frases de
 
 ### 1 · Lee los dos casos (5 min) — live
 
-**VH-022.** El bot de atención al cliente de un concesionario, instruido para "estar de acuerdo con todo lo que diga el cliente",
-aceptó vender una Tahoe 2024 por 1 $ y lo llamó una oferta legalmente vinculante. Puerta: *los system prompts no son
-fronteras de seguridad; los compromisos con consecuencias exigen reglas deterministas, no la buena voluntad de un LLM.*
+**VH-049.** Tras una actualización del sistema, un cliente frustrado convenció al chatbot de atención al cliente de una
+empresa de paquetería para soltar palabrotas, escribir un poema sobre lo inútil que era y llamar a su propia empresa
+"la peor empresa de reparto del mundo". La empresa desactivó la parte de IA (enero de 2024). Puerta: *los system prompts
+no son fronteras de seguridad; lo que un bot puede decir o prometer en nombre de la empresa es una regla determinista
+fuera del modelo, probada con clientes enfadados y tramposos antes del lanzamiento.*
 
 **VH-056.** Knight Capital desplegó código de trading nuevo en siete de ocho servidores; el octavo corría código viejo
 con una bandera reutilizada. Cuarenta y cinco minutos, 440 millones de dólares. Puerta: *los sistemas algorítmicos con
@@ -131,7 +133,7 @@ dijo la puerta, qué cambió. Jueves: empareja con un 100 y acompáñale a su pr
 
 ## Lista de comprobación — una página
 
-*Una página. Marca sobre la marcha.* · Escenarios VH-022 Chevrolet of Watsonville · VH-056 Knight Capital · 60 minutos · una instalación
+*Una página. Marca sobre la marcha.* · Escenarios VH-049 DPD · VH-056 Knight Capital · 60 minutos · una instalación
 
 **Antes**
 - [ ] Soy un 100 (un anfitrión lo marcó).
