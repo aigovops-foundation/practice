@@ -1,7 +1,7 @@
 # Nivel 200 · Adaptar — hoja de trabajo
 
 **Escenarios:** el chatbot de una empresa de paquetería al que un cliente convenció para soltar palabrotas y llamar a su propia empresa la peor
-([FailFest](https://www.aigovops-foundation.com/f-ai-friday.html?id=VH-049) **VH-049, DPD**) y el despliegue que perdió 440 M$ en 45 minutos (**VH-056, Knight Capital**).
+([FailFest](https://www.aigovops-foundation.com/f-ai-friday.html?id=VH-049) **VH-049, DPD**) y el despliegue que perdió más de 460 M$ en 45 minutos (**VH-056, Knight Capital**).
 **Tiempo:** 60 minutos. **Instalar:** Python 3.11+, git; un `pip install` desde el código fuente.
 **Habilidades necesarias:** cualquiera de las dos. La vía en palabras llanas escribe las reglas como frases y deja que las
 herramientas las rendericen; la vía de código escribe YAML y lee las frases de vuelta.
@@ -30,7 +30,7 @@ no son fronteras de seguridad; lo que un bot puede decir o prometer en nombre de
 fuera del modelo, probada con clientes enfadados y tramposos antes del lanzamiento.*
 
 **VH-056.** Knight Capital desplegó código de trading nuevo en siete de ocho servidores; el octavo corría código viejo
-con una bandera reutilizada. Cuarenta y cinco minutos, 440 millones de dólares. Puerta: *los sistemas algorítmicos con
+con una bandera reutilizada. Cuarenta y cinco minutos, más de 460 millones de dólares. Puerta: *los sistemas algorítmicos con
 autoridad para mover el mercado tienen puerta de despliegue, interruptor de apagado y reversión ensayada.*
 
 Uno trata del agente. El otro, del pipeline que despliega al agente. Vas a poner puerta a ambos.
