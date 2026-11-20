@@ -275,7 +275,10 @@
     b.innerHTML=`<span class="lv">${d.level==='start'?'start here':'level '+d.level+' · '+d.name}</span><q>${d.q}</q><small>${d.hint}</small>`; doors.appendChild(b);});
   function nextThursday(){const n=new Date(); const d=new Date(n); const day=n.getDay(); let add=(4-day+7)%7; if(add===0 && n.getHours()>=16) add=7; if(add===0) add=0; d.setDate(n.getDate()+add); return d;}
   function fmt(d){return d.toLocaleDateString('en-US',{weekday:'long',day:'numeric',month:'long'});}
+  let current=null;
+  document.addEventListener('thursday:update',()=>{if(current) render(current);});
   function render(d){
+    current=d;
     const thu=nextThursday();
     const meet=()=>(window.THURSDAY&&window.THURSDAY.next)?window.THURSDAY.next.date+', '+window.THURSDAY.next.time:fmt(thu)+', 15:00 Pacific';
     const wsHref = d.ws.startsWith('http')?d.ws:P+d.ws;
