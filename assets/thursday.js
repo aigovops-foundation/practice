@@ -2,9 +2,10 @@
  *
  * THE ONLY LINE A HOST EVER EDITS IS joinUrl BELOW. Paste the recurring meeting link once; every
  * page that shows Thursday (the practice café, docs/THURSDAY, the Foundation's Thursday page, the
- * community platform's events card) reads this file and renders the next Thursday's date itself —
- * 15:00 Pacific, with the UTC hour worked out for daylight-saving — so nothing goes stale and nobody
- * updates a line each week.
+ * community platform's events card) reads this file. The date and time come from the next event on
+ * the Foundation's Luma calendar (luma.com/aigovops), via the daily snapshot at
+ * www.aigovops-foundation.com/data/next-meeting.json. If that cannot be read, it falls back to the
+ * next Thursday at hourPacific, with the UTC hour worked out for daylight-saving.
  */
 window.THURSDAY = {
   joinUrl: "https://teams.microsoft.com/meet/239700241949951?p=irQfj9QYneC4QBop2Q",            // ← paste the recurring meeting link here (Google Meet / Zoom). Empty = "posted by 14:45 Pacific".
@@ -42,6 +43,25 @@ window.THURSDAY = {
       else { el.textContent = "Join link — posted here by 14:45 Pacific on the day"; el.setAttribute("aria-disabled", "true"); if (!el.getAttribute("href")) el.setAttribute("href", "#"); }
     });
   }
-  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", render); else render();
+  function ready() { if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", render); else render(); }
+  ready();
   window.THURSDAY.next = { date: dateStr, time: timeStr, iso: day };
+
+  // Prefer the next event on Luma over the computed Thursday.
+  if (!window.fetch) return;
+  fetch("https://www.aigovops-foundation.com/data/next-meeting.json", { cache: "no-cache" })
+    .then(function (r) { return r.ok ? r.json() : null; })
+    .then(function (m) {
+      if (!m || typeof m.start !== "string") return;
+      var t = new Date(m.start);
+      if (isNaN(t.getTime()) || t < new Date()) return;
+      var hm = new Intl.DateTimeFormat("en-GB", { timeZone: TZ, hour: "2-digit", minute: "2-digit", hour12: false }).format(t);
+      var uh = t.getUTCHours(), um = t.getUTCMinutes();
+      dateStr = fmt(t, { weekday: "long", day: "numeric", month: "long", year: "numeric" });
+      timeStr = hm + " Pacific (" + uh + ":" + (um < 10 ? "0" : "") + um + " UTC)";
+      day = ymd(t);
+      window.THURSDAY.next = { date: dateStr, time: timeStr, iso: day, url: m.url, title: m.title };
+      ready();
+    })
+    .catch(function () {});
 })();
