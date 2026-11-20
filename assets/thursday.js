@@ -62,6 +62,7 @@ window.THURSDAY = {
       day = ymd(t);
       window.THURSDAY.next = { date: dateStr, time: timeStr, iso: day, url: m.url, title: m.title };
       ready();
+      document.dispatchEvent(new Event("thursday:update"));
     })
     .catch(function () {});
 })();
