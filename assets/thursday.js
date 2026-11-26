@@ -1,16 +1,20 @@
 /* Thursday — the one file that knows when and where.
  *
- * THE ONLY LINE A HOST EVER EDITS IS joinUrl BELOW. Paste the recurring meeting link once; every
+ * A HOST EDITS ONLY joinUrl AND skip BELOW. Paste the recurring meeting link once; every
  * page that shows Thursday (the practice café, docs/THURSDAY, the Foundation's Thursday page, the
  * community platform's events card) reads this file. The date and time come from the next event on
  * the Foundation's Luma calendar (luma.com/aigovops), via the daily snapshot at
  * www.aigovops-foundation.com/data/next-meeting.json. If that cannot be read, it falls back to the
  * next Thursday at hourPacific, with the UTC hour worked out for daylight-saving.
+ *
+ * skip lists Pacific dates (YYYY-MM-DD) with no call. The computed date steps past them, and a
+ * Luma event on a skipped day is ignored, so no page advertises a call that is off.
  */
 window.THURSDAY = {
   joinUrl: "https://teams.microsoft.com/meet/239700241949951?p=irQfj9QYneC4QBop2Q",            // ← paste the recurring meeting link here (Google Meet / Zoom). Empty = "posted by 14:45 Pacific".
   host: "Ken",
-  hourPacific: 15
+  hourPacific: 15,
+  skip: ["2026-11-26"]                                   // dates with no call, e.g. "2026-12-24"
 };
 
 (function () {
@@ -19,11 +23,14 @@ window.THURSDAY = {
   function hourIn(d) { return parseInt(new Intl.DateTimeFormat("en-GB", { timeZone: TZ, hour: "2-digit", hour12: false }).format(d), 10) % 24; }
   function ymd(d) { return new Intl.DateTimeFormat("en-CA", { timeZone: TZ, year: "numeric", month: "2-digit", day: "2-digit" }).format(d); }
 
-  // Next Thursday in Pacific time. On a Thursday before 10:00 Pacific, that is today.
+  var skip = {};
+  (cfg.skip || []).forEach(function (s) { skip[s] = true; });
+
+  // Next Thursday in Pacific time that is not skipped. On a Thursday before 16:00 Pacific, that is today.
   var d = new Date();
-  for (var i = 0; i < 8; i++) {
+  for (var i = 0; i < 8 + 7 * (cfg.skip || []).length; i++) {
     var wd = fmt(d, { weekday: "long" });
-    if (wd === "Thursday" && !(i === 0 && hourIn(d) >= cfg.hourPacific + 1)) break;
+    if (wd === "Thursday" && !(i === 0 && hourIn(d) >= cfg.hourPacific + 1) && !skip[ymd(d)]) break;
     d = new Date(d.getTime() + 864e5);
   }
   // The UTC hour of 15:00 Pacific on that day (22 in summer, 23 in winter).
@@ -54,7 +61,7 @@ window.THURSDAY = {
     .then(function (m) {
       if (!m || typeof m.start !== "string") return;
       var t = new Date(m.start);
-      if (isNaN(t.getTime()) || t < new Date()) return;
+      if (isNaN(t.getTime()) || t < new Date() || skip[ymd(t)]) return;
       var hm = new Intl.DateTimeFormat("en-GB", { timeZone: TZ, hour: "2-digit", minute: "2-digit", hour12: false }).format(t);
       var uh = t.getUTCHours(), um = t.getUTCMinutes();
       dateStr = fmt(t, { weekday: "long", day: "numeric", month: "long", year: "numeric" });
