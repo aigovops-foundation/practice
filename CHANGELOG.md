@@ -5,6 +5,8 @@ All notable changes. Semantic versioning; the release train is `fall-2026`.
 ## Unreleased
 
 ### Changed
+- 25 Nov 2026: `assets/thursday.js` takes a `skip` list of Pacific dates with no call; the computed date
+  steps past them and a Luma event on a skipped day is ignored. Set to `["2026-11-26"]` (US Thanksgiving). #47
 - 16 Nov 2026: Level 200's agent case is now **VH-049 DPD** (the parcel chatbot talked into swearing at a
   customer, January 2024), replacing VH-022 in the worksheet (EN and ES), its README and policy template,
   the café card, the Manifesto (EN and ES) and `MEMBER-ACTIVITIES.md`. Knight Capital (VH-056) stays.

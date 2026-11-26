@@ -10,6 +10,7 @@ on:
       - index.html
       - scripts/test_door_landing.py
       - docs/THURSDAY.md
+      - assets/thursday.js
       - scripts/test_thursday_fallback.py
   push:
     branches: [main]
@@ -17,6 +18,7 @@ on:
       - index.html
       - scripts/test_door_landing.py
       - docs/THURSDAY.md
+      - assets/thursday.js
       - scripts/test_thursday_fallback.py
 
 permissions:
