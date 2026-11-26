@@ -8,7 +8,7 @@
  * next Thursday at hourPacific, with the UTC hour worked out for daylight-saving.
  */
 window.THURSDAY = {
-  joinUrl: "https://teams.microsoft.com/meet/239700241949951?p=irQfj9QYneC4QBop2Q",            // ← paste the recurring meeting link here (Google Meet / Zoom). Empty = "posted by 14:45 Pacific".
+  joinUrl: "https://teams.microsoft.com/meet/239700241949951?p=irQfj9QYneC4QBop2Q",            // ← paste the recurring meeting link here (Microsoft Teams today). Empty = "posted by 14:45 Pacific".
   host: "Ken",
   hourPacific: 15
 };
@@ -19,7 +19,7 @@ window.THURSDAY = {
   function hourIn(d) { return parseInt(new Intl.DateTimeFormat("en-GB", { timeZone: TZ, hour: "2-digit", hour12: false }).format(d), 10) % 24; }
   function ymd(d) { return new Intl.DateTimeFormat("en-CA", { timeZone: TZ, year: "numeric", month: "2-digit", day: "2-digit" }).format(d); }
 
-  // Next Thursday in Pacific time. On a Thursday before 10:00 Pacific, that is today.
+  // Next Thursday in Pacific time. On a Thursday before hourPacific + 1 (16:00 Pacific), that is today.
   var d = new Date();
   for (var i = 0; i < 8; i++) {
     var wd = fmt(d, { weekday: "long" });
