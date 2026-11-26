@@ -9,6 +9,19 @@ All notable changes. Semantic versioning; the release train is `fall-2026`.
   customer, January 2024), replacing VH-022 in the worksheet (EN and ES), its README and policy template,
   the café card, the Manifesto (EN and ES) and `MEMBER-ACTIVITIES.md`. Knight Capital (VH-056) stays.
   Dated records (`docs/WREN.md`, the PRD, the 11 Sept changes note) keep the case as it was taught then.
+- 16 Nov 2026 (#45): case lines corrected after a source check. Knight Capital's loss is now "more than
+  $460 million" (the SEC's figure; $440M was Knight's first estimate) in the Level 200 worksheet (EN and ES),
+  `MEMBER-ACTIVITIES.md` and the café card. The café cards' statements for 200, 300 (Cigna; nH Predict as a
+  lawsuit's allegation, also in the Level 300 worksheet EN and ES), 400 (Robodebt; Horizon as the CCRC states
+  it) and FailFest were rewritten to what the sources support.
+- 20 Nov 2026 (#48, #49, #50): Thursday shows the next event on the Foundation's Luma calendar instead of a
+  fixed 15:00 Pacific. `assets/thursday.js` reads the daily next-meeting snapshot and falls back to the next
+  Thursday at 15:00 Pacific; a door opened from the URL re-renders its plan and card when the event arrives
+  (#49); the worksheets (EN and ES), `docs/THURSDAY.md` and the stranger invite point to Luma (#50).
+
+### Fixed
+- 16 Nov 2026 (#44): the dead Visa Trusted Agent Protocol press link in the 13 Sept research notes was
+  re-pointed; #48 moved it again to the Visa newsroom release when the next URL also 404'd.
 
 ## [1.0.0-rc.1] — 2026-09-11
 
