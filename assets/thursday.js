@@ -11,7 +11,7 @@
  * Luma event on a skipped day is ignored, so no page advertises a call that is off.
  */
 window.THURSDAY = {
-  joinUrl: "",                                           // ← paste the recurring meeting link here (Google Meet). Empty = "posted by 14:45 Pacific".
+  joinUrl: "https://meet.google.com/bhz-qdbz-fwb",       // ← paste the recurring meeting link here (Google Meet). Empty = "posted by 14:45 Pacific".
   host: "Ken",
   hourPacific: 15,
   skip: ["2026-11-26"]                                   // dates with no call, e.g. "2026-12-24"
